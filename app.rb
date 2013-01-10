@@ -15,16 +15,16 @@ end
 
 configure do
   use Rack::Session::Cookie, :secret => Digest::SHA1.hexdigest(rand.to_s)
-  KEY = "3sON24EvPRDBEcdv6VlWQ"
-  SECRET = "tuMeO9Oqe6MaZK9r4W48VmS2QcdAD7e1MGuWGk4s"
+  KEY = ""
+  SECRET = ""
 end
 
  
 before do
   if session[:access_token]
     Twitter.configure do |config|
-      config.consumer_key = '3sON24EvPRDBEcdv6VlWQ'
-      config.consumer_secret = 'tuMeO9Oqe6MaZK9r4W48VmS2QcdAD7e1MGuWGk4s'
+      config.consumer_key = ''
+      config.consumer_secret = ''
       config.oauth_token = session[:access_token]
       config.oauth_token_secret = session[:access_token_secret]
     end
