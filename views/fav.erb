@@ -1,0 +1,42 @@
+<style type="text/css">
+
+.subject{
+  margin: 10px 0;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 160px;
+  color: inherit;
+  text-rendering: optimizelegibility;
+  font-size: 150px;
+}
+
+.form {
+  font-size: 40px;
+}
+
+#fav_button {
+  padding: 30px 19px;
+  font-size: 60px;
+  -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+          border-radius: 10px;
+}
+
+</style>
+
+
+
+<div class="subject">落とせ、<br>ふぁぼ爆雷<br></div><br><br>
+<div class="form">
+<form method="post" action="/fav">
+  @<input type="text" name="screen_name" value="アカウント名">に
+  <select name="count">
+    <% 10.times{ |i| %>
+      <option value=<%= 10*(i+1) %>><%= 10*(i+1) %></option>
+    <% } %>
+      <option value=150>150</option>
+      <option value=200>200</option>
+  </select>ふぁぼ 
+  <input id="fav_button" class="btn btn-large btn-warning" type="submit" value="爆雷">
+</form>
+</div>
